@@ -1,10 +1,17 @@
-// Task - H
-function getReverse (word: string): string{
-    
-    return word.split("").reverse().join("");
+
+function getPositive(numbers: number[]): string{ 
+    let a = ("");
+    for(let number of numbers){
+        if(number > 0){
+            a = a + number;
+
+        }
+    }
+    let b = a.toString();
+    return b.split("").join("")
 
 }
 
-const javob = getReverse("hello")
-console.log("javob :", javob);
+console.log(getPositive([1, -4, 2]));
+
 
