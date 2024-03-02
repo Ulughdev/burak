@@ -25,4 +25,11 @@ console.log(getPositive([1, -4, 2]));
 
 */
 
+/*
+  Traditional Api
+  Rest  Api
+  GraphQL Api
+  ....
+*/
+
 
