@@ -24,7 +24,7 @@ const memberSchema = new Schema({
 
     memberPhone: {
         type: String,
-        indexe: {unique: true, sparse: true},
+        index: {unique: true, sparse: true},
         required: true,
     },
 
