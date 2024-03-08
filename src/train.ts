@@ -1,9 +1,17 @@
-function getDigits(mix: string): Number{
-    let a:number = parseFloat(mix.replace(/[^\d\.]*/g, ''));;
-     return a;
+//  Task -J
+function findLongestWord(word: string): string {
+   let pablo = word.split(' ');
+   let max = pablo[0];
+   for(let ele of pablo){
+    if(max.length < ele.length){
+      max= ele;
+    }
+   }
+   
+   return max;
 };
 
-console.log("javob: ", getDigits("m21nh2jhh667"));
+console.log(findLongestWord("I come from Uzbekistan"));
 
 /* PROJECT STANDARDS
  - logging standards   --controller 
