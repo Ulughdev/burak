@@ -1,17 +1,26 @@
-//  Task -J
-function findLongestWord(word: string): string {
-   let pablo = word.split(' ');
-   let max = pablo[0];
-   for(let ele of pablo){
-    if(max.length < ele.length){
-      max= ele;
-    }
-   }
-   
-   return max;
-};
+// Task - K 
 
-console.log(findLongestWord("I come from Uzbekistan"));
+function countVowels(input: string): number{
+  const b = ["a", "e", "i", "o", "u"];
+  let a: number = 0;
+  for(let letter of input.toLowerCase()){
+    if(b.includes(letter)){
+      a ++;
+    }
+  }
+   
+
+
+  return a;
+}
+
+console.log(countVowels("string"));
+
+
+
+
+
+
 
 /* PROJECT STANDARDS
  - logging standards   --controller 
