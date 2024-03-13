@@ -1,20 +1,16 @@
-// Task - K 
+// Task - L
 
-function countVowels(input: string): number{
-  const b = ["a", "e", "i", "o", "u"];
-  let a: number = 0;
-  for(let letter of input.toLowerCase()){
-    if(b.includes(letter)){
-      a ++;
-    }
-  }
-   
-
-
-  return a;
+function reverseSentence(sentence: string): string {
+let pablo = sentence.split(" ");
+let a = [];
+for (let ele of pablo){
+  a.push(ele.split("").reverse().join(""));
+}
+//console.log("Pablo: ", pablo[0]);
+return a.join(" ");
 }
 
-console.log(countVowels("string"));
+console.log(reverseSentence("we like coding"));
 
 
 
