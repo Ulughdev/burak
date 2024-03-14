@@ -32,7 +32,7 @@ makeUploader("products").array("productImages", 5),
 productController.createNewProduct);
 
 routerAdmin.post(
-    "/product/:id",
+    "/product/:id/",
 restaurantController.verifyRestaurant,
 productController.updateChosenProduct);
 
