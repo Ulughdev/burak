@@ -1,16 +1,18 @@
-// Task - L
+// Task - M
 
-function reverseSentence(sentence: string): string {
-let pablo = sentence.split(" ");
-let a = [];
-for (let ele of pablo){
-  a.push(ele.split("").reverse().join(""));
-}
-//console.log("Pablo: ", pablo[0]);
-return a.join(" ");
+const getSquareNumbers = (numbers: any[]): object => {
+
+  let a: any[] = [];
+  numbers.map(function(ele){
+    let b = ele * ele;
+    let c = {number: ele, square: b};
+    a.push(c);
+    //console.log(c)
+  })
+return a;
 }
 
-console.log(reverseSentence("we like coding"));
+console.log(getSquareNumbers([1, 2, 3]));
 
 
 
