@@ -20,7 +20,7 @@ memberController.signup = async (req: Request, res: Response) => {
         // TODO    Tokens   Authentication
         res.json({member: result});
     }catch (err) {
-        console.log("ERROR, Login", err);
+        console.log("ERROR, signup", err);
         if(err instanceof Errors) res.status(err.code).json(err);
         else res.status(Errors.standard.code).json(Errors.standard);
         //res.json({});
