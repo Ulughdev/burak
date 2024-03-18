@@ -1,20 +1,15 @@
-// Task - M
+// Task - N
 
-const getSquareNumbers = (numbers: any[]): object => {
+const palindromCheck = (value: string): boolean => {
+  let a = value.split("").reverse().join("");
+  if(a === value){
+    return true;
+  }
+  return false;
 
-  let a: any[] = [];
-  numbers.map(function(ele){
-    let b = ele * ele;
-    let c = {number: ele, square: b};
-    a.push(c);
-    //console.log(c)
-  })
-return a;
 }
 
-console.log(getSquareNumbers([1, 2, 3]));
-
-
+console.log(palindromCheck("dad"));
 
 
 
