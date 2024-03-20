@@ -1,16 +1,16 @@
-// Task - N
-
-const palindromCheck = (value: string): boolean => {
-  let a = value.split("").reverse().join("");
-  if(a === value){
-    return true;
-  }
-  return false;
-
+// Task - O
+function calculateSumOfNumbers(input: any): number {
+  let a = 0;
+  input.map((ele: any) => {
+    if(typeof ele === "number") {
+      a += ele; 
+    }
+    //console.log(ele);
+  })
+  return a;
 }
 
-console.log(palindromCheck("dad"));
-
+console.log(calculateSumOfNumbers([10,"10", {son:10}, true, 35,]));
 
 
 
