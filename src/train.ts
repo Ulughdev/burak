@@ -1,18 +1,11 @@
-// Task - O
-function calculateSumOfNumbers(input: any): number {
-  let a = 0;
-  input.map((ele: any) => {
-    if(typeof ele === "number") {
-      a += ele; 
-    }
-    //console.log(ele);
-  })
-  return a;
+// Task - P
+
+function objectToArray(values: any):object[]{
+  let a = Object.entries(values);
+ return a;
 }
 
-console.log(calculateSumOfNumbers([10,"10", {son:10}, true, 35,]));
-
-
+console.log(objectToArray({a:10, b:20}));
 
 
 /* PROJECT STANDARDS
