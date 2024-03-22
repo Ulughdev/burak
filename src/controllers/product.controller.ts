@@ -43,7 +43,9 @@ productController.createNewProduct = async (req: AdminRequest, res: Response) =>
 
         await productService.createNewProduct(data);
 
-        res.send(`<script> alert("Sucsessful creation"); window.location.replase('/admin/product/all')</script>`);
+        res.send(
+            `<script> alert("Sucsessful creation"); window.location.replace('/admin/product/all')</script>`
+            );
         
         // TODO    Tokens   Authentication
     }catch (err) {
@@ -51,7 +53,7 @@ productController.createNewProduct = async (req: AdminRequest, res: Response) =>
         const message = 
           err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
         res.send(
-            `<script> alert("${message}"); window.location.replase('/admin/product/all')</script>`
+            `<script> alert("${message}"); window.location.replace('/admin/product/all')</script>`
             );
         
     }
