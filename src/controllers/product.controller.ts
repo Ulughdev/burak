@@ -32,7 +32,7 @@ productController.getAllProducts = async (req: Request, res: Response) => {
 productController.createNewProduct = async (req: AdminRequest, res: Response) => {
     try {
         console.log("createNewProducts");
-        console.log("req.Files",req.files);
+        console.log("req.body",req.body);
         if(!req.files?.length)
            throw new Errors(HttpCode.INTERNAL_SERVER_ERROR, Message.CREATE_FAILED);
            
@@ -43,7 +43,7 @@ productController.createNewProduct = async (req: AdminRequest, res: Response) =>
 
         await productService.createNewProduct(data);
 
-        res.send(`<script> alert("Sucsessful creation"): window.location.replase('admin/product/all')</script>`);
+        res.send(`<script> alert("Sucsessful creation"); window.location.replase('/admin/product/all')</script>`);
         
         // TODO    Tokens   Authentication
     }catch (err) {
@@ -51,7 +51,7 @@ productController.createNewProduct = async (req: AdminRequest, res: Response) =>
         const message = 
           err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
         res.send(
-            `<script> alert("${message}"): window.location.replase('admin/product/all')</script>`
+            `<script> alert("${message}"); window.location.replase('/admin/product/all')</script>`
             );
         
     }
