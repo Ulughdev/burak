@@ -1,15 +1,19 @@
 // Task - Q
-function hasProperty(value1: object, value2: string): boolean {
-  let a = false;
-  for(let ele in value1 ) {
-    if(ele === value2) {
-      a = true ;
+function calculate(values: string): number {
+  let a = 0;
+  let b = values.split('');
+  for (let ele of b) {
+    let c = parseInt(ele);
+    if (c >= 0 || c <= 0) {
+      a+=c;
+    }
+    
   }
-}
-return a;
 
+  return a;
 }
-console.log(hasProperty({name: "BMW", model: "M3"}, "model"));
+
+console.log(calculate("1+3"));
 
 
 /* PROJECT STANDARDS
