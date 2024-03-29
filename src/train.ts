@@ -1,19 +1,17 @@
-// Task - Q
-function calculate(values: string): number {
-  let a = 0;
-  let b = values.split('');
-  for (let ele of b) {
-    let c = parseInt(ele);
-    if (c >= 0 || c <= 0) {
-      a+=c;
-    }
-    
+// Task - S
+function missingNumber(numbers: number[]): number {
+const points = numbers;
+let a = points.sort(function(a, b){return a-b});
+for(let i =0; i < a.length; i++){
+  if(a[i+1] - 1 !== a[i]){
+    return a[i] + 1;
   }
 
-  return a;
+  }
+console.log(a);
+  return 1;
 }
-
-console.log(calculate("1+3"));
+console.log(missingNumber([3,0,1]));
 
 
 /* PROJECT STANDARDS
